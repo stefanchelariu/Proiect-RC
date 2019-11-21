@@ -1,0 +1,15 @@
+Usecases:
+GUI:
+ -Show the information gained from the server(Location, Temperature, Humidity, etc) to the user.
+ -The user can change the location or refresh the informations and the GUI sends a request to the controller to aquire new data .
+
+CONTROLLER:
+-Recives requests from the GUI and creates a string of bytes to be sent to the Connector
+-Recives bytes from the Connector, extracting data (temperature, umidity, etc) and sends them to the GUI
+-Uses Header.py and Package.py
+
+
+CONNECTOR:
+-communicates with the server using socket
+-sends data from the Controller to the server
+-sends data from the server to the Controller
